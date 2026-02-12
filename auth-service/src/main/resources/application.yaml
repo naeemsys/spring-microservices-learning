@@ -1,0 +1,15 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: auth-service
+
+auth:
+  jwt:
+    # path to private key file on classpath or filesystem
+    private-key-location: classpath:jwk-private.pem
+    key-id: demo-key-1     # kid value in JWKS header
+#    access-token-ttl-sec: 300   # 5 minutes
+    access-token-ttl-sec: 30000
+    refresh-token-ttl-sec: 1209600 # 14 days

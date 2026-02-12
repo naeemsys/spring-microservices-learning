@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+#spring:
+#  application:
+#    name: config-server
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: file:./config-repo
+#        git:
+#          uri: file:./config-repo
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:D:\spring-microservices\config-repo
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+
